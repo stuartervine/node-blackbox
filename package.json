@@ -1,0 +1,8 @@
+{
+  "name": "node-blackbox",
+  "version": "1.0.0",
+  "description": "A simple module to call out to the blackbox CLI in order to load encrypted content.",
+  "main": "blackbox.js",
+  "author": "Stuart Ervine",
+  "license": "MIT"
+}
