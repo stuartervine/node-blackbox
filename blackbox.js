@@ -3,7 +3,7 @@ const fs = require('fs');
 const execSync = require('child_process').execSync;
 
 const loadEncryptedContent = (fileName) => {
-    return execSync('blackbox_cat ' + fileName).toString().split('\r\n').join('\n');
+    return execSync('blackbox_cat ' + fileName).toString().split('\r\n').join('\n').split("shred_file:")[0];;
 };
 
 const loadEncryptedProperty = (fileName, propertyName) => {
