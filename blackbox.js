@@ -4,7 +4,8 @@ const execSync = require('child_process').execSync;
 
 const loadEncryptedContent = (fileName) => {
     var content =  execSync('blackbox_cat ' + fileName).toString().split('\r\n').join('\n');
-    return content.substring(0, content.indexOf("shred_file: WARNING:"));
+    var index = content.indexOf("shred_file: WARNING:");
+    return index !== -1? content.substring(0,index):content;
 };
 
 const loadEncryptedProperty = (fileName, propertyName) => {
